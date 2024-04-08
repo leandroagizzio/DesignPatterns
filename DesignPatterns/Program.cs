@@ -9,6 +9,11 @@ namespace DesignPatterns
     class Program
     {
         static void Main(string[] args) {
+
+            IRunner runner = new SingleResponsibility();
+            runner.Run();
+
+            Console.ReadKey();
         }
     }
 }
