@@ -10,7 +10,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args) {
 
-            IRunner runner = new SingleResponsibility();
+            IRunner runner = new LiskovSubstitution();
             runner.Run();
 
             Console.ReadKey();
