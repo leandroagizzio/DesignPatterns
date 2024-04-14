@@ -10,7 +10,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args) {
 
-            IRunner runner = new LiskovSubstitution();
+            IRunner runner = new DependencyInversion();
             runner.Run();
 
             Console.ReadKey();

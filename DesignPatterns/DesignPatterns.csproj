@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyInversion.cs" />
+    <Compile Include="InterfaceSegregation.cs" />
     <Compile Include="IRunner.cs" />
     <Compile Include="LiskovSubstitution.cs" />
     <Compile Include="OpenClosed.cs" />
