@@ -10,7 +10,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args) {
 
-            IRunner runner = new DependencyInversion();
+            IRunner runner = new LifeWithoutBuilder();
             runner.Run();
 
             Console.ReadKey();
