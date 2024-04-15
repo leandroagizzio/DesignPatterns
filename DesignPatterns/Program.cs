@@ -10,7 +10,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args) {
 
-            IRunner runner = new LifeWithoutBuilder();
+            IRunner runner = new FluentBuilderInheritance();
             runner.Run();
 
             Console.ReadKey();

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyInversion.cs" />
+    <Compile Include="FluentBuilderInheritance.cs" />
     <Compile Include="InterfaceSegregation.cs" />
     <Compile Include="IRunner.cs" />
     <Compile Include="LifeWithoutBuilder.cs" />
