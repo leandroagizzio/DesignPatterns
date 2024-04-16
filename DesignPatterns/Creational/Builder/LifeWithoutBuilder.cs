@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace DesignPatterns
+namespace DesignPatterns.Creational.Builder
 {
     public class LifeWithoutBuilder : IRunner
     {
