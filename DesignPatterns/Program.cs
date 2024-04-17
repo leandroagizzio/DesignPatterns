@@ -12,7 +12,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args) {
 
-            IRunner runner = new FunctionalBuilder();
+            IRunner runner = new FacetedBuilder();
             runner.Run();
 
             Console.ReadKey();

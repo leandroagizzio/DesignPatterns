@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creational\Builder\FacetedBuilder.cs" />
     <Compile Include="SOLID\DependencyInversion.cs" />
     <Compile Include="Creational\Builder\FluentBuilderInheritance.cs" />
     <Compile Include="Creational\Builder\FunctionalBuilder.cs" />
