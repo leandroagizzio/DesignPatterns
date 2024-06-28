@@ -14,7 +14,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new ObjectTrackingBulkReplacement();
+            IRunner runner = new CodeFactoryExercise();
             runner.Run();
 
             Console.ReadKey();
