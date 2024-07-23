@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DesignPatterns.SOLID;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Factory;
+using DesignPatterns.Creational.Prototype;
 
 namespace DesignPatterns
 {
@@ -14,10 +15,11 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new CodeFactoryExercise();
+            IRunner runner = new PrototypeCodingExercise();
             runner.Run();
 
             Console.ReadKey();
         }
+
     }
 }

@@ -5,6 +5,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <!-- Disable "BinaryFormatter is obsolete" warnings for entire project -->
+    <NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
+    <!-- Warning: Setting the following switch is *NOT* recommended in web apps. -->
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
 
 </Project>
