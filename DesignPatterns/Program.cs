@@ -7,6 +7,7 @@ using DesignPatterns.SOLID;
 using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Factory;
 using DesignPatterns.Creational.Prototype;
+using DesignPatterns.Creational.Singleton;
 
 namespace DesignPatterns
 {
@@ -15,7 +16,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new PrototypeCodingExercise();
+            IRunner runner = new SingletonCodingExercise();
             runner.Run();
 
             Console.ReadKey();
