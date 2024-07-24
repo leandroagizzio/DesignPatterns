@@ -16,7 +16,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new PerThreadSingleton();
+            IRunner runner = new SingletonCodingExercise();
             runner.Run();
 
             Console.ReadKey();
