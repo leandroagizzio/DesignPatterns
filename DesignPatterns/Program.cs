@@ -8,6 +8,7 @@ using DesignPatterns.Creational.Builder;
 using DesignPatterns.Creational.Factory;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
+using DesignPatterns.Structural.Adapter;
 
 namespace DesignPatterns
 {
@@ -16,7 +17,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new SingletonCodingExercise();
+            IRunner runner = new AdapterCodingExercise();
             runner.Run();
 
             Console.ReadKey();
