@@ -9,6 +9,7 @@ using DesignPatterns.Creational.Factory;
 using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Structural.Adapter;
+using DesignPatterns.Structural.Bridge;
 
 namespace DesignPatterns
 {
@@ -17,7 +18,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new AdapterCodingExercise();
+            IRunner runner = new BridgeCodingExercise();
             runner.Run();
 
             Console.ReadKey();
