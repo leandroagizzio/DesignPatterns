@@ -10,6 +10,7 @@ using DesignPatterns.Creational.Prototype;
 using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
+using DesignPatterns.Structural.Composite;
 
 namespace DesignPatterns
 {
@@ -18,7 +19,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new BridgeCodingExercise();
+            IRunner runner = new CompositeExercise();
             runner.Run();
 
             Console.ReadKey();
