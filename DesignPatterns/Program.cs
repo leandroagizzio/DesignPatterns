@@ -11,6 +11,10 @@ using DesignPatterns.Creational.Singleton;
 using DesignPatterns.Structural.Adapter;
 using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
+using DesignPatterns.Structural.Decorator;
+using DesignPatterns.Structural.Flyweight;
+using DesignPatterns.Structural.Proxy;
+using DesignPatterns.Behavioural.ChainOfResponsibility;
 
 namespace DesignPatterns
 {
@@ -19,7 +23,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new CompositeExercise();
+            IRunner runner = new DecoratorInDepInj();
             runner.Run();
 
             Console.ReadKey();
