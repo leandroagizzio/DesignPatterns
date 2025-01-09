@@ -23,7 +23,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new DecoratorInDepInj();
+            IRunner runner = new TextFormatting();
             runner.Run();
 
             Console.ReadKey();
