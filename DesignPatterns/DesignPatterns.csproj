@@ -11,6 +11,7 @@
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
     <!-- After installing Nunit-->
     <GenerateProgramFile>false</GenerateProgramFile>
+    <StartupObject>DesignPatterns.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +26,7 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="8.0.0" />
+    <PackageReference Include="ImpromptuInterface" Version="8.0.6" />
     <PackageReference Include="JetBrains.dotMemoryUnit" Version="3.2.20220510" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
     <PackageReference Include="morelinq" Version="4.3.0" />
