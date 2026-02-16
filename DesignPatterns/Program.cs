@@ -23,7 +23,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new TextFormatting();
+            IRunner runner = new BitFragging();
             runner.Run();
 
             Console.ReadKey();
