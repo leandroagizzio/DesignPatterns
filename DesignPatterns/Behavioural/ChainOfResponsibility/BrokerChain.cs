@@ -10,7 +10,18 @@ namespace DesignPatterns.Behavioural.ChainOfResponsibility
     public class BrokerChain : IRunner
     {
         public void Run() {
+            var game = new Game();
+            var monster = new Monster(game, "Goblin", 3, 4);
+            WriteLine(monster);
 
+            using (new TripleAttackModifier(game, monster)) {
+                WriteLine(monster);
+                using (new EnhanceDefenseModifier(game, monster)) {
+                    WriteLine(monster);
+                }
+            }
+
+            WriteLine(monster);
         }
     }
 
@@ -41,6 +52,7 @@ namespace DesignPatterns.Behavioural.ChainOfResponsibility
             WhatToQuery = whatToQuery;
             Value = value;
         }
+
     }
 
     public class Monster
@@ -73,7 +85,47 @@ namespace DesignPatterns.Behavioural.ChainOfResponsibility
         }
 
         public override string ToString() {
-            return base.ToString();
+            return this.OverrideToString();
+        }
+    }
+
+    public abstract class MonsterModifier : IDisposable
+    {
+        protected Game _game;
+        protected Monster _monster;
+
+        protected MonsterModifier(Game game, Monster monster) {
+            _game = game ?? throw new ArgumentNullException(nameof(game));
+            _monster = monster ?? throw new ArgumentNullException(nameof(monster));
+            _game.Queries += Handle;
+        }
+
+        protected abstract void Handle(object sender, Query q);
+
+        public void Dispose() {
+            _game.Queries -= Handle;
+        }
+    }
+
+    public class TripleAttackModifier : MonsterModifier
+    {
+        public TripleAttackModifier(Game game, Monster monster) : base(game, monster) {
+        }
+
+        protected override void Handle(object sender, Query q) {
+            if (q.MonsterName == _monster.Name && q.WhatToQuery == Query.Argument.Attack)
+                q.Value *= 3;
+        }
+    }
+
+    public class EnhanceDefenseModifier : MonsterModifier
+    {
+        public EnhanceDefenseModifier(Game game, Monster monster) : base(game, monster) {
+        }
+
+        protected override void Handle(object sender, Query q) {
+            if (q.MonsterName == _monster.Name && q.WhatToQuery == Query.Argument.Defense)
+                q.Value += 2;
         }
     }
 }
