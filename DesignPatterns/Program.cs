@@ -23,7 +23,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
 
-            IRunner runner = new BitFragging();
+            IRunner runner = new BrokerChain();
             runner.Run();
 
             Console.ReadKey();
