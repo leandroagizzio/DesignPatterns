@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Behavioural.ChainOfResponsibility
 {
-    public abstract class Creature
+    public abstract class Creaturee
     {
         public int Attack { get; set; }
         public int Defense { get; set; }
 
     }
 
-    public class Goblin : Creature
+    public class Goblin : Creaturee
     {
-        public Goblin(Game game) { }
+        public Goblin(Gamee game) { }
     }
 
     public class GoblinKing : Goblin
     {
-        public GoblinKing(Game game) : base (game) { }
+        public GoblinKing(Gamee game) : base (game) { }
     }
 
-    public class Game
+    public class Gamee
     {
-        public IList<Creature> Creatures;
+        public IList<Creaturee> Creatures;
     }
 
     public class ChainOfResponsibilityCodingExercise : IRunner
